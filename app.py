@@ -22,7 +22,7 @@ def download_card():
 
 def keep_alive():
     """Periodically visit the website to keep it active."""
-    url = "http://127.0.0.1:5001/"  # Replace with your website's public URL in production
+    url = os.getenv("KEEP_ALIVE_URL", "http://127.0.0.1:5000")  # Update this in production
     while True:
         try:
             response = requests.get(url, timeout=10)
@@ -35,12 +35,12 @@ def keep_alive():
         time.sleep(720)  # Wait 12 minutes before the next request
 
 if __name__ == "__main__":
-    from waitress import serve
+    # Bind to the dynamically assigned port or default to 5000 for local development
+    port = int(os.getenv("PORT", 5000))
 
     # Start the keep_alive function in a background thread
     threading.Thread(target=keep_alive, daemon=True).start()
 
-    # Uncomment this line for development
-    app.run(debug=False, port=5001)
-    # Uncomment this line for production
-    # serve(app, host='0.0.0.0', port=5001)
+    # Use waitress for production or Flask's built-in server for local development
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=port)
