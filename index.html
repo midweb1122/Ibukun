@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <title>ALL FREIGHT SUPPORT SERVICES LTD</title>
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        transform: scale(1.05) rotate(15deg);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        transform: scale(1.1) rotate(30deg);
+    }
+    75% {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        transform: scale(1.05) rotate(15deg);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(8px, -8px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.download-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: #fff;
+    font-size: 0.8em; /* Reduced font size */
+    padding: 8px 16px; /* Adjusted padding */
+    border-radius: 25px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-link i {
+    margin-right: 6px; /* Slightly smaller space between icon and text */
+    font-size: 1em; /* Adjust icon size to match smaller text */
+}
+
+.download-link:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.card {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    color: #333;
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card h2,
+.card h3 {
+    color: #333;
+}
+
+.card h4 {
+    color: #701012; /* Updated color for the company name */
+}
+
+.card p {
+    color: #777;
+    margin: 20px 0;
+    font-size: 1em;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 15px;
+    font-size: 2em;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    animation: glow 6s ease-in-out infinite, float 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.circle:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s, 0s;
+}
+
+.circle:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 70%;
+    animation-delay: 1s, 2s;
+}
+
+.circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    top: 75%;
+    left: 25%;
+    animation-delay: 2s, 4s;
+}
+
+.circle:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    top: 20%;
+    left: 80%;
+    animation-delay: 3s, 1s;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 30px 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+        top: -60px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+        font-size: 1.5em;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="card">
+        <img src="static/img/IBUKUN.jpg" alt="CEO Photo">
+        <br><br><br>
+
+        <h2>Ibukun Ogunleye</h2>
+        <hr>
+        <h3>COO</h3>
+        <h4>All Freight Support Services LTD</h4>
+
+        <div class="social-links">
+            <a href="https://wa.me/2348064100054" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="mailto:ibukun.ogunleye@allfreightsupportservices.com" target="_blank" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="https://allfreightsupportservices.com/" target="_blank" title="Website">
+                <i class="fas fa-globe"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/victoria-ibukun-ogunleye-486096328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <!-- Add Phone Icon -->
+            <a href="tel:+2348064100054" title="Call">
+                <i class="fas fa-phone"></i>
+            </a>
+
+            <!-- Add Download Card -->
+            <br>
+            <br>
+            <br>
+            <a href="static/Ibukun_Ogunleye.zip" download="BusinessCard_Ibukun_Ogunleye" title="Download Card" class="download-link">
+                <i class="fas fa-download"></i> Download Card
+            </a>
+        </div>
+
+
+    </div>
+</body>
+
+
+</html>
